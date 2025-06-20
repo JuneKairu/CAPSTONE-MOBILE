@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "496600494323",
+    "project_id": "jdk-homecare",
+    "storage_bucket": "jdk-homecare.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496600494323:android:4d1c8491315f56fe310786",
+        "android_client_info": {
+          "package_name": "com.jdkhomecare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNooHzGR1QYvW9lKiYLYCv4djAq2pv3qg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
