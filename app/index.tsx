@@ -1,7 +1,7 @@
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import { Image, Pressable, Text, TouchableOpacity, View } from 'react-native';
-import '../global.css';
+import "../global.css";
 
 const logo = require('./assets/images/jdklogo.png');
 
@@ -12,15 +12,15 @@ export default function AuthEntry() {
 
   const handleContinue = () => {
     if (authMode === 'login') {
-      router.push(`./login?role=${userType}`);
+      router.push(`/login?role=${userType}`);
     } else if (authMode === 'signup') {
-      router.push(`./signup?role=${userType}`);
+      router.push(`/signup?role=${userType}`);
     }
   };
 
   return (
     <View className="flex-1 justify-center items-center bg-white px-8">
-      <Image source={logo} className="w-36 h-36 mb-10" resizeMode="contain" />
+      <Image source={logo} style={{ width: 140, height: 140, marginBottom: 40 }} resizeMode="contain" />
 
       <TouchableOpacity
         className="bg-blue-500 rounded-md px-6 py-3 w-full mb-4"
@@ -49,7 +49,7 @@ export default function AuthEntry() {
                 className={`px-5 py-2 rounded-full border ${
                   userType === role ? 'bg-blue-100 border-blue-500' : 'border-gray-300'
                 }`}
-                onPress={() => setUserType(role as typeof userType)}
+                onPress={() => setUserType(role as 'client' | 'freelancer')}
               >
                 <Text className="text-sm capitalize text-gray-800">{role}</Text>
               </Pressable>
@@ -58,7 +58,9 @@ export default function AuthEntry() {
 
           <TouchableOpacity
             className={`rounded-md px-6 py-3 ${
-              userType ? 'bg-indigo-600' : 'bg-indigo-300'
+              userType
+                ? 'bg-indigo-600'
+                : 'bg-indigo-300'
             }`}
             disabled={!userType}
             onPress={handleContinue}

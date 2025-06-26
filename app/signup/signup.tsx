@@ -8,7 +8,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
-import '../../global.css';
+import "../../global.css";
 
 export default function SignUpScreen() {
   const { role } = useLocalSearchParams();
